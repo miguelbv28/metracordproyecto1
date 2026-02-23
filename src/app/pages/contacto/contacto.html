@@ -1,0 +1,38 @@
+<main class="contacto">
+    <section class="contacto-hero">
+        <h1>Contacto</h1>
+        <p>Comunícate con nosotros a través de nuestras redes oficiales.</p>
+    </section>
+
+    <section class="contacto-redes">
+        <a href="https://www.facebook.com/share/1CsDrYTtLD/" target="_blank" class="red-card facebook">
+            <div class="card-content">
+                <span class="icono">
+                    @if (hasFacebookIcon) {
+                        <img src="img/facebook.png" alt="Facebook">
+                    } @else {
+                        📘
+                    }
+                </span>
+                <h2>Facebook</h2>
+                <p>Síguenos y escríbenos directamente</p>
+                <span class="red-link">Ir a Facebook</span>
+            </div>
+        </a>
+
+        <a href="mailto:metracord@gmail.com" class="red-card gmail">
+            <div class="card-content">
+                <span class="icono">
+                    @if (hasGmailIcon) {
+                        <img src="img/gmail.png" alt="Gmail">
+                    } @else {
+                        📧
+                    }
+                </span>
+                <h2>Gmail</h2>
+                <p>Envíanos un correo electrónico</p>
+                <span class="red-link">metracord@gmail.com</span>
+            </div>
+        </a>
+    </section>
+</main>
