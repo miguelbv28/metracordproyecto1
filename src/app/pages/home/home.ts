@@ -15,9 +15,9 @@ export class HomeComponent implements OnInit, OnDestroy {
   technologies = [
   { name: 'HTML', img: 'img/html.png' },
   { name: 'CSS', img: 'img/css.png' },
-  { name: 'JavaScript', img: 'img/javascript.jpg' },
+  { name: 'JavaScript', img: 'img/js.png' },
   { name: 'PHP', img: 'img/php.png' },
-  { name: 'MySQL', img: 'img/mysql.jpg' },
+  { name: 'MySQL', img: 'img/sql.png' },
   { name: 'Git', img: 'img/git.png' },
   { name: 'Node.js', img: 'img/node.png' }
 ];
