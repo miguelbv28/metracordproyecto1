@@ -2,3 +2,18 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Quitar margen blanco del navegador */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 6%;
+ background-color: #0a0a0f; /* o el color que uses */
+}
