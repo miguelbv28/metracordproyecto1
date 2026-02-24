@@ -156,10 +156,12 @@
   margin-bottom: 4rem;
 }
 
+/* 1. Ampliamos un poco el contenedor para que la sombra no se corte al hacer hover */
 .carousel-container {
   position: relative;
-  max-width: 300px;
+  max-width: 350px; /* Lo subimos de 300px a 350px */
   margin: 0 auto;
+  padding: 20px; /* Espacio para que el brillo del hover respire */
 }
 
 .carousel-window {
@@ -170,17 +172,25 @@
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease;
+  /* Cambiamos 0.5s por 0.8s y añadimos un bezier para que sea más fluido */
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .carousel-item {
   min-width: 100%;
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  align-items: center;
+  padding: 1rem 0; /* Quitamos padding lateral para evitar desajustes de medida */
 }
 
 .tech-card {
+  width: 280px; /* Ancho fijo para que todas las tarjetas sean iguales */
+  height: 280px; /* Altura fija para evitar saltos visuales entre imágenes */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.08),
@@ -188,12 +198,8 @@
   );
   backdrop-filter: blur(20px);
   border-radius: 20px;
-  padding: 2.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow:
-    0 10px 40px rgba(0, 191, 255, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 191, 255, 0.1);
   transition: all 0.4s ease;
 }
 
@@ -205,12 +211,9 @@
 }
 
 .tech-icon {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100px; /* Reducimos un poco el área para dar aire */
+  height: 100px;
+  margin-bottom: 1.5rem;
 }
 
 .tech-icon img {
