@@ -1,44 +1,107 @@
-/* src/app/components/header/header.css */
+/* ============================= */
+/* HEADER FUTURISTA BLANCO */
+/* ============================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 15, 0.85),
+    rgba(20, 20, 30, 0.7)
+  );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 5%; /* Mantiene el logo y menú alineados al 5% de la pantalla */
-    background-color: white;
-    width: 100%;
-    box-sizing: border-box; /* Evita que el padding desborde el ancho */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo { 
-    height: 80px; /* Ajustado para que no empuje demasiado el nav hacia arriba */
-    width: auto;
+/* Logo */
+.logo {
+  height: 90px;
+  width: auto;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
+.logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6));
+}
+
+/* Navegación */
 .nav {
-    display: flex;
-    gap: 30px;
-    align-items: center;
+  display: flex;
+  gap: 2rem;
 }
 
+/* Links blancos */
 .nav-link {
-    text-decoration: none;
-    color: #002855;
-    font-weight: 600;
-    font-size: 1.1rem;
-    position: relative;
-    padding-bottom: 8px;
-    transition: color 0.3s;
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
-/* La rayita activa alineada */
+/* Hover blanco brillante */
+.nav-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Línea animada inferior blanca */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.8),
+    rgba(255,255,255,0.4)
+  );
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Link activo */
+.active-link {
+  color: #ffffff;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+}
+
 .active-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #002855;
-    border-radius: 2px;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav {
+    gap: 1.5rem;
+  }
 }
